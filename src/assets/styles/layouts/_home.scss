@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: 400;
+}
+
+/* Función */
+
+@function sqr($num) {
+  @return #{$num * $num}px;
+}
+
+body p {
+  font-size: sqr(4);
+}
+
+/* Cabecera, Footer y Contenedor */
+
+header.cabecera {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d8d8d8;
+  text-align: center;
+  background: rgb(255, 255, 255);
+}
+
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main>.contenedor {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Menú */
+/* Anidado */
+
+nav {
+
+  ul {
+    font-size: 15px;
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  li {
+    padding: 5px;
+    display: inline-block;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  img {
+    padding-top: 35px;
+  }
+}
+
+/* Footer */
+/* Variables */
+.footer.footer {
+  background-color: $azul-corporativo;
+  color: $font-color;
+}
+
+.contendor--top {
+  padding-top: 20px;
+}
+
+
+footer.footer p {
+  font-size: 16px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+footer.footer a {
+  color: $font-color;
+}
+
+footer.footer li {
+  padding: 8px;
+  display: inline-block;
+}
+
+footer>.contenedor {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+
+/* Hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $font-color;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/palacio1.jpg");
+  width: 100%;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__titular {
+  font-size: 30px;
+}
+
+.hero__subtitulo {
+  text-decoration: none;
+  font-weight: 600;
+  color: $font-color;
+}
+
+.hero p {
+  margin: 10px 70px 10px 70px;
+  text-align: justify center;
+}
+
+/* Curiosidades */
+
+h2 {
+  text-align: center;
+  padding: 30px 0px 10px 0px;
+}
+
+.curiosidades {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.curiosidades__tabla {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+td {
+  background-color: $azul-corporativo;
+  color: $font-color;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Imágenes */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 6px 30px 6px;
+}
+
+.galeria img {
+  width: 25%;
+  padding: 0 6px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* Datos */
+
+.datos {
+  background-color: #205269;
+  color: $font-color;
+  display: flex;
+  flex: row;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.datos div {
+  padding: 40px 20px 40px 20px;
+}
+
+/* Más información */
+
+.info {
+  margin: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+span {
+  margin: 10px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  background-color: $azul-corporativo;
+}
+
+button a {
+  color: $font-color;
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+/* Hero */
+
+@media (max-width: 1200px) {
+  .hero {
+    height: 450px;
+  }
+}
+
+@media (max-width: $mqMinWidth) {
+  .hero {
+    height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 600px;
+  }
+}
+
+/* Galeria */
+
+@media (max-width: $mqMinWidth) {
+  .galeria img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria img {
+    width: 100%;
+  }
+}
